@@ -13,13 +13,13 @@ code {
 }
 
 .margin  {
-  margin-top: 5px;
-}
-.margin_button  {
   margin-top: 25px;
 }
+.margin_button  {
+  margin-top: 45px;
+}
 
-.paddingTop {  padding-top  : 25px;
+.paddingTop {  padding-top  : 45px;
 
 
 
