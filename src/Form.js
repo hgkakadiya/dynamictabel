@@ -42,10 +42,15 @@ export default function Form() {
     })
 
     const add_and = (index) => {
-        const row = { parameter: "", condition: "", rs: "", }
-        let y = [...formik.values.data];
-        y[index] = [...formik.values.data[index], row];
-        formik.setFieldValue("data", y)
+        //index inner list's index number.
+        const row = { parameter: "", condition: "", rs: "", } // craete new onject
+        console.log('new element: ', row);
+        let copyData = [...formik.values.data]; // copy original value from data
+        console.log('copyData - full Object: ', copyData);
+        console.log('original data on index: ', copyData[index]); 
+        copyData[index] = [...formik.values.data[index], row]; // copy index's array and add row on it.
+        console.log('update data by index: ', copyData[index]); 
+        formik.setFieldValue("data", copyData) // reset data
     };
 
 
